@@ -1,0 +1,21 @@
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: buttom;
+}
+.item-c {
+  grid-area: display;
+  display: grid;
+}
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header'
+    'buttom display';
+  background: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
