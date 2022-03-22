@@ -1,7 +1,7 @@
 import Display from './Display.jsx';
 import BoxBotton from './BoxBotton.jsx';
 import { useState } from 'react';
-import sty from './styleDM.css';
+import styleDM from './styleDM.css';
 
 const DrumpMachine = () => {
   const [nameDisplay, setNamedisplay] = useState('');
