@@ -1,4 +1,4 @@
-const botones2 = [
+const track = [
   {
     id: '81',
     name: 'Header-1',
@@ -55,9 +55,14 @@ const botones2 = [
   },
 ];
 
-// const reproducirMusica2 = (url) => {
-//   let audio = new Audio(url);
-//   audio.play();
-// };
+const reproMusic = (url) => {
+  let audio = new Audio(url);
+  audio.play();
+};
 
-export default botones2;
+const buscarUrl = (id) => {
+  let trackMusic = track.find((element) => element.id == id);
+  return trackMusic.url !== '' ? trackMusic.url : '';
+};
+
+export { reproMusic, buscarUrl, track };
