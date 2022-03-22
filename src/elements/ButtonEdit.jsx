@@ -1,11 +1,12 @@
 import Button from '@mui/material/Button';
+import p from '@rollup/plugin-dynamic-import-vars';
 import { useEffect, useState } from 'react';
 import { reproMusic, buscarUrl, track } from './musica';
 
 const ButtonEdit = ({ setNamedisplay }) => {
   const [letra, setLetra] = useState('r');
 
-  document.addEventListener('keydown', (e) => teclapResionada(e));
+  document.addEventListener('keydown', (e) => setLetra(e));
 
   return (
     <>
@@ -27,6 +28,7 @@ const ButtonEdit = ({ setNamedisplay }) => {
           </Button>
         </>
       ))}
+      <p>{letra}</p>
     </>
   );
 };
